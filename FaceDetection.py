@@ -21,7 +21,7 @@ while 1:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Detects faces of different sizes in the input image
-    face_cascade = cv2.CascadeClassifier("/Users/keren_dahan/PycharmProjects/FaceSwap/venv/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml")
+    face_cascade = cv2.CascadeClassifier("./venv/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml")
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 
     for (x, y, w, h) in faces:
@@ -54,3 +54,6 @@ cap.release()
 
 # De-allocate any associated memory usage
 cv2.destroyAllWindows()
+
+
+
